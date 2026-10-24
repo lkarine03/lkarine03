@@ -1,206 +1,45 @@
 
-# Catálogo de Livros
+# Lana Karine
 
-Este projeto foi desenvolvido com o objetivo de colocar em prática meus conhecimentos em **Java, Spring Boot, desenvolvimento de APIs REST e operações CRUD**.
+Olá! Sou estudante de Sistemas de Informação na Universidade Federal do Pará (UFPA) e técnica em Informática para Internet pelo IEMA.
 
-A aplicação consiste em uma API para gerenciamento de um catálogo de livros, permitindo cadastrar, listar, consultar, atualizar e excluir registros.
+Gosto de aprender coisas novas, explorar diferentes tecnologias e colocar meus conhecimentos em prática por meio de projetos.
 
-Durante o desenvolvimento, trabalhei com conceitos de programação orientada a objetos, persistência de dados e organização de uma aplicação backend utilizando o ecossistema Spring.
+Tenho interesse principalmente em desenvolvimento de software, tanto frontend quanto backend. Ao longo da minha formação, também tive contato com infraestrutura de TI, computação em nuvem e práticas de DevOps, áreas que ampliaram minha visão sobre o desenvolvimento e o funcionamento das aplicações.
 
-## Sobre o projeto
+Neste GitHub, compartilho projetos individuais, trabalhos colaborativos e experiências que fazem parte da minha trajetória de aprendizado.
 
-O sistema permite gerenciar livros por meio de requisições HTTP, utilizando o Spring Boot para processar as operações e o banco de dados H2 para armazenar as informações durante a execução.
+## Projetos
 
-Cada livro possui os seguintes atributos:
+### [Catálogo de Livros](https://github.com/lkarine03/catalogo-livros)
 
-- ID
-- Título
-- Autor
-- Ano de publicação
+Projeto de estudos em Java e Spring Boot, estruturado para praticar o desenvolvimento de APIs REST, operações CRUD e persistência de dados com Spring Data JPA e H2.
 
-## Funcionalidades
+### [Encolhe! — Portal dos Links](https://github.com/cloudops-squad-2/hackaton-portal-dos-links)
 
-- Cadastrar novos livros
-- Listar os livros cadastrados
-- Consultar um livro pelo identificador
-- Atualizar as informações de um livro
-- Excluir livros do catálogo
-- Validar os dados recebidos nas operações de cadastro e atualização
+Projeto colaborativo desenvolvido durante um hackathon, voltado ao encurtamento e gerenciamento de links.
 
-## Tecnologias utilizadas
+O projeto reúne tecnologias de desenvolvimento web, backend, infraestrutura e DevOps.
 
-- **Java 21:** linguagem de programação
-- **Spring Boot:** estrutura principal da aplicação
-- **Spring Web MVC:** desenvolvimento das rotas REST
-- **Spring Data JPA:** acesso e persistência dos dados
-- **H2 Database:** banco de dados em memória
-- **Maven:** gerenciamento de dependências e execução do projeto
+### [Sistema de Controle de Tarefas](https://github.com/lkarine03/controle-tarefas-sql)
 
-## Estrutura do projeto
+Aplicação desenvolvida para praticar operações CRUD, integração com banco de dados e comunicação entre frontend e backend, utilizando Python, Flask e MySQL.
 
-```text
-catalogo-livros/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── lanakarine/
-│       │           └── catalogolivros/
-│       │               ├── CatalogoLivrosApplication.java
-│       │               ├── Livro.java
-│       │               ├── LivroController.java
-│       │               └── LivroRepository.java
-│       └── resources/
-│           └── application.properties
-├── pom.xml
-└── README.md
-```
+### [Análise de Feedbacks Escolares](https://github.com/lkarine03/analise-feedbacks-escolares)
 
-### Principais arquivos
+Aplicação web para organização, visualização e filtragem de feedbacks escolares, desenvolvida com HTML, CSS e JavaScript.
 
-- `CatalogoLivrosApplication.java`: inicialização da aplicação Spring Boot.
-- `Livro.java`: representação da entidade Livro.
-- `LivroController.java`: implementação das rotas e operações da API.
-- `LivroRepository.java`: acesso aos dados utilizando Spring Data JPA.
-- `application.properties`: configuração da aplicação e do banco H2.
-- `pom.xml`: dependências e configurações do Maven.
+### [Portfólio Pessoal](https://github.com/lkarine03/meu-portifolio)
 
-## Operações CRUD
+Site desenvolvido para reunir meus projetos e compartilhar um pouco da minha trajetória na área de tecnologia.
 
-A API disponibiliza as seguintes rotas:
+## O que venho estudando
 
-| Método | Rota | Funcionalidade |
-|--------|------|----------------|
-| POST | `/livros` | Cadastrar um livro |
-| GET | `/livros` | Listar os livros cadastrados |
-| GET | `/livros/{id}` | Consultar um livro pelo ID |
-| PUT | `/livros/{id}` | Atualizar as informações de um livro |
-| DELETE | `/livros/{id}` | Excluir um livro |
+Atualmente, continuo aprofundando meus conhecimentos em desenvolvimento de software, Java, Python, React, TypeScript e tecnologias relacionadas ao desenvolvimento de aplicações.
 
-### Exemplo de cadastro
+Também tenho interesse em computação em nuvem, automação e DevOps, buscando compreender diferentes etapas do ciclo de desenvolvimento de software.
 
-Para cadastrar um livro, envie uma requisição `POST` para:
+## Contato
 
-```http
-POST http://localhost:8080/livros
-Content-Type: application/json
-```
-
-Com o seguinte corpo JSON:
-
-```json
-{
-  "titulo": "Dom Casmurro",
-  "autor": "Machado de Assis",
-  "anoPublicacao": 1899
-}
-```
-
-A API foi estruturada para armazenar o registro e retornar as informações do livro cadastrado, incluindo seu identificador.
-
-### Consulta de livros
-
-Para consultar todos os livros:
-
-```http
-GET http://localhost:8080/livros
-```
-
-Para consultar um livro específico:
-
-```http
-GET http://localhost:8080/livros/1
-```
-
-### Atualização de livros
-
-Para atualizar um registro:
-
-```http
-PUT http://localhost:8080/livros/1
-Content-Type: application/json
-```
-
-Exemplo de dados:
-
-```json
-{
-  "titulo": "O Cortiço",
-  "autor": "Aluísio Azevedo",
-  "anoPublicacao": 1890
-}
-```
-
-### Exclusão de livros
-
-Para excluir um registro:
-
-```http
-DELETE http://localhost:8080/livros/1
-```
-
-## Como executar
-
-### 1. Requisitos
-
-Para executar o projeto localmente, é necessário ter instalado:
-
-- Java 21
-- Maven
-
-### 2. Obter o projeto
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/lkarine03/catalogo-livros.git
-```
-
-Acesse a pasta:
-
-```bash
-cd catalogo-livros
-```
-
-Também é possível baixar os arquivos diretamente pelo GitHub.
-
-### 3. Executar a aplicação
-
-No terminal, execute:
-
-```bash
-mvn spring-boot:run
-```
-
-Com a aplicação iniciada, a API deverá ficar disponível em:
-
-http://localhost:8080/livros
-
-As requisições podem ser realizadas por ferramentas como Postman ou Insomnia.
-
-## Banco de dados
-
-O projeto utiliza o **H2 Database**, configurado para funcionar em memória.
-
-Essa configuração permite utilizar um banco de dados sem precisar instalar e configurar um servidor MySQL ou PostgreSQL.
-
-Os registros ficam disponíveis durante a execução da aplicação e são perdidos quando ela é encerrada.
-
-## Aprendizados
-
-A construção deste projeto foi voltada à prática dos seguintes conceitos:
-
-- Programação orientada a objetos com Java
-- Desenvolvimento de APIs REST com Spring Boot
-- Implementação de operações CRUD
-- Utilização de entidades com JPA
-- Persistência de dados com Spring Data JPA
-- Integração entre aplicação e banco de dados
-- Manipulação de requisições e respostas HTTP
-- Organização básica de uma aplicação backend
-
-## Observações
-
-Este é um projeto simples de estudos, desenvolvido para consolidar conhecimentos em Java e Spring Boot.
-
-A aplicação foi estruturada para execução local e suas funcionalidades ainda precisam ser testadas nesse ambiente.
+- [LinkedIn](https://www.linkedin.com/in/lana-karine-1438b020b)
+- [E-mail](mailto:karinelana03@gmail.com)
